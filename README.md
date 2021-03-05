@@ -24,4 +24,7 @@ Probar proyecto:
 		genera carpeta dist/ donde viene el compilado
 	http://localhost:4200/
 	
-	
+Ruta del frontend: src/app
+
+Pagina para tener un proyecto angular online:
+	https://stackblitz.com/	

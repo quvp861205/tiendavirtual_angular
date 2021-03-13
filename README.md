@@ -31,8 +31,17 @@ Pagina para tener un proyecto angular online:
 
 Generador automatico de componentes
 	ng g c card: generar componente card
+	ng g c home: generar componente home
+	ng g c products: generar componente products
+	ng g c contact: generar componente contact
 	ng g pipe exponential: genera un pipe
 	ng g d highlight: generar una directiva
 
 Analizar codigo de errores:
 	ng lint
+
+Rutas de la pagina: 
+	http://localhost:4200/home
+	http://localhost:4200/products
+	http://localhost:4200/contact
+	http://localhost:4200/ejercicios

@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
-import {NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {IProduct} from './product.model';
-
+import { Component, OnInit } from '@angular/core';
+import {IProduct} from '../product.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-ejercicios',
+  templateUrl: './ejercicios.component.html',
+  styleUrls: ['./ejercicios.component.scss']
 })
-export class AppComponent {
+export class EjerciciosComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
   title = 'Bienvenido al curso de angular';
 
   itemsName = ['nicolas', 'julian', 'ana'];
@@ -41,4 +44,5 @@ export class AppComponent {
       description: 'bla bla bla bla bla'
     },
   ];
+
 }

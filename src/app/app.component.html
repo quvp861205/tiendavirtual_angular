@@ -44,9 +44,23 @@
 
 <br>
 
-<div *ngFor="let product of products">
+<h3>ngFor example</h3>
+<div *ngFor="let product of products" style="width: 100px; background-color: silver; margin:2px;">
   {{ product.title }} <br>
   <img [src]="product.image" width="100" /> <br>
   {{ product.price }}
   <br>
+</div>
+
+<br>
+USANDO PIPES:
+<input type="text" [(ngModel)]="power">
+Exponente de 2={{ power | exponential }}
+<br>
+
+<h3>ngFor example with component</h3>
+<div class="product-grid">
+  <app-product *ngFor="let product of products"
+  (productClick)="clickProduct($event)" 
+  [product]="product"></app-product>
 </div>

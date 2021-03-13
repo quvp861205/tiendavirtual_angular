@@ -28,3 +28,11 @@ Ruta del frontend: src/app
 
 Pagina para tener un proyecto angular online:
 	https://stackblitz.com/	
+
+Generador automatico de componentes
+	ng g c card: generar componente card
+	ng g pipe exponential: genera un pipe
+	ng g d highlight: generar una directiva
+
+Analizar codigo de errores:
+	ng lint

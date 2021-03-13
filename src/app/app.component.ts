@@ -13,12 +13,18 @@ export class AppComponent {
 
   itemsName = ['nicolas', 'julian', 'ana'];
 
+  power = 10;
+
   addItem(){
     this.itemsName.push("nuevo item");
   }
 
   deleteItem(index: number){
     this.itemsName.splice(index,1);
+  }
+
+  clickProduct(id: number) {
+    console.log("product", id);
   }
 
   products: IProduct[] = [

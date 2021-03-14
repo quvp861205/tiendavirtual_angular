@@ -37,6 +37,9 @@ Generador automatico de componentes
 	ng g pipe exponential: genera un pipe
 	ng g d highlight: generar una directiva
 	ng g s products: generar un servicio para productos
+	ng g m shared: generar un modulo completo
+	ng g m products --routing: generamos modulo con rutas
+	ng g g admin: genera un guardian llamado admin, funciona como middleware para rutas
 
 Analizar codigo de errores:
 	ng lint
@@ -51,3 +54,7 @@ Instalar https://swiperjs.com/: permite hacer carruseles
 	npm install swiper --save
 	Agregar los estilos de la libreria:
 		angular.json => styles
+
+Modulos Shared y Core:
+	Shared: se utiliza principalmente para compartir componentes, directivas, pipes entre otros modulos.
+	Core: Se utiliza para compartir servicios a otros modulos.

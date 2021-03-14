@@ -1,7 +1,7 @@
 import {Component, Input, Output, 
     EventEmitter, OnChanges, SimpleChanges, 
     OnInit, DoCheck, OnDestroy} from '@angular/core';
-import {IProduct} from '../product.model';
+import {IProduct} from './../../models/product.model';
 
 @Component({
     selector: 'app-product',

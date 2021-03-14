@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
-
-import {ProductsComponent} from './products/products.component';
-import {ContactComponent} from './contact/contact.component';
 import {EjerciciosComponent} from './ejercicios/ejercicios.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {ProductDetailComponent} from './product/components/product-detail/product-detail.component';
 import {LayoutComponent} from './layout/layout.component';
+
+import {AdminGuard} from './admin.guard';
 
 const routes: Routes = [
   {
@@ -27,24 +26,22 @@ const routes: Routes = [
       {
         // ng g c home
         path: 'products',
-        component: ProductsComponent
-      },
-      {
-        path: 'products/:id',
-        component: ProductDetailComponent
+        loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       {
         // ng g c home
         path: 'contact',
-        component: ContactComponent
+        canActivate: [AdminGuard],
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+      },
+      {
+        // ng g c home
+        path: 'ejercicios',
+        component: EjerciciosComponent
       },
     ]
-  },  
-  {
-    // ng g c home
-    path: 'ejercicios',
-    component: EjerciciosComponent
   },
+
   {
     path: '**',
     component: PageNotFoundComponent

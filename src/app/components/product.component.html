@@ -12,6 +12,7 @@
   <p>{{ today | date:'medium' }}</p>
   <div>
     <button (click)="addCar()">Agregar al carrito</button>
+    <a [routerLink]="['/products', product.id]">Ver detalle</a>
 </div>
 </div>
 </div>

@@ -51,5 +51,13 @@ export class ProductsService {
     }
   ];
 
+  getAllProducts() {
+    return this.products;
+  }
+
+  getProduct(id: string) {
+    return this.products.find(item => id === item.id );
+  }
+
   constructor() { }
 }

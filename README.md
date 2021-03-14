@@ -36,6 +36,7 @@ Generador automatico de componentes
 	ng g c contact: generar componente contact
 	ng g pipe exponential: genera un pipe
 	ng g d highlight: generar una directiva
+	ng g s products: generar un servicio para productos
 
 Analizar codigo de errores:
 	ng lint
@@ -45,3 +46,8 @@ Rutas de la pagina:
 	http://localhost:4200/products
 	http://localhost:4200/contact
 	http://localhost:4200/ejercicios
+
+Instalar https://swiperjs.com/: permite hacer carruseles
+	npm install swiper --save
+	Agregar los estilos de la libreria:
+		angular.json => styles

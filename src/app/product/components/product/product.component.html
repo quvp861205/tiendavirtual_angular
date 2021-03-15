@@ -11,7 +11,7 @@
   <p>{{product.description | slice:0:20}}</p>
   <p>{{ today | date:'medium' }}</p>
   <div>
-    <button (click)="addCar()">Agregar al carrito</button>
+    <button (click)="addCar()" mat-raised-button color="primary">Agregar al carrito</button>
     <a [routerLink]="['/products', product.id]">Ver detalle</a>
 </div>
 </div>

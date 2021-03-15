@@ -60,4 +60,17 @@ Modulos Shared y Core:
 - Core: Se utiliza para compartir servicios a otros modulos.
 
 Ventajas de modularizar entidades:
-Al cargar la pagina en la web, cada entidad se carga en un fichero js diferente por lo cual es mas rapido mostrar lo que ya se cargó y lo demás queda en segundo plano preparandose para cuando se requiera mostrar.
+Al cargar la pagina en la web, cada entidad se carga en un fichero js diferente por lo cual es mas rapido mostrar lo que ya se cargó y lo demás queda en segundo plano preparandose para cuando se requiera mostr
+
+
+Instalando Material Design para las interfaces graficas:
+- https://material.io/design
+- https://material.angular.io/guide/getting-started: guia de instalacion de la libreria
+- https://material.angular.io/components/categories: recursos para la interfaz grafica
+- Instalar en angular: ng add @angular/material
+- ng g m material: modulo para la interfaz grafica
+
+Instalando libreria para grillas:
+- http://flexboxgrid.com/
+- Instalar en angular: npm i flexboxgrid --save
+- Agregar estilos css: angular.json => styles {"./node_modules/flexboxgrid/dist/flexboxgrid.min.css"}

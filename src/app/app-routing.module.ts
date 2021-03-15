@@ -26,6 +26,7 @@ const routes: Routes = [
       {
         // ng g c home
         path: 'products',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       {
@@ -41,11 +42,15 @@ const routes: Routes = [
       },
     ]
   },
-
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
   {
     path: '**',
     component: PageNotFoundComponent
-  }
+  },
+  
 ];
 
 @NgModule({

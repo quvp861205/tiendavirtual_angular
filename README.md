@@ -74,3 +74,12 @@ Instalando libreria para grillas:
 - http://flexboxgrid.com/
 - Instalar en angular: npm i flexboxgrid --save
 - Agregar estilos css: angular.json => styles {"./node_modules/flexboxgrid/dist/flexboxgrid.min.css"}
+
+Creando vistas con Angular schematic: Generar interfaces rapido
+- https://material.angular.io/guide/schematics
+- ng g m admin --routing
+- Instalar libreria: ng add @angular/cdk
+- Crear formulario: ng g @angular/material:address-form admin/components/product-form
+- Ruta para probar: http://localhost:4200/admin/create
+- ng g @angular/material:nav admin/components/nav
+- Resultado: http://localhost:4200/admin

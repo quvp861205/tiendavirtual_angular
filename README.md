@@ -79,7 +79,24 @@ Creando vistas con Angular schematic: Generar interfaces rapido
 - https://material.angular.io/guide/schematics
 - ng g m admin --routing
 - Instalar libreria: ng add @angular/cdk
+- o bien: npm install --save @angular/material @angular/cdk
 - Crear formulario: ng g @angular/material:address-form admin/components/product-form
 - Ruta para probar: http://localhost:4200/admin/create
 - ng g @angular/material:nav admin/components/nav
 - Resultado: http://localhost:4200/admin
+
+Integrar API REST:
+- al app.module.ts agregar la libreria e importar
+- Api Get: http://platzi-store.herokuapp.com/products
+- Api Get{id}: http://platzi-store.herokuapp.com/products/1	
+
+Ambiente intermedio entre desarrollo y produccion:
+- Modificar el angular.json agregando los objetos stag
+- Crear el environment.stag.ts
+- probar localmente: ng serve -c=stag
+- compilar: ng build -c=stag
+
+Creando un inventario en el administrador: https://material.angular.io/components/table/overview
+- componente lista: ng g c admin/components/products-list
+- componente dashboard: ng g c admin/components/dashboard
+- componente inventario: ng g c admin/components/table

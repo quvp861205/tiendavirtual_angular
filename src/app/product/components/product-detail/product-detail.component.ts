@@ -40,7 +40,8 @@ export class ProductDetailComponent implements OnInit {
       title: 'Nuevo desde angular',
       image: 'assets/images/banner-1.jpg',
       description: 'este articulo es nuevo',
-      price: 555
+      price: 555,
+      count: 1
     };
 
     this.productsService.createProduct(newProduct)

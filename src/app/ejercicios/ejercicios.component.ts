@@ -34,14 +34,16 @@ export class EjerciciosComponent implements OnInit {
       image: 'assets/images/camiseta.png',
       title: 'Camiseta',
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: 'bla bla bla bla bla',
+      count: 1
     },
     {
       id: '2',
       image: 'assets/images/hoodie.png',
       title: 'Hoodie',
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: 'bla bla bla bla bla',
+      count: 1
     },
   ];
 

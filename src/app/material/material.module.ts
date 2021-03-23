@@ -17,6 +17,7 @@ import { MatRadioModule } from '@angular/material/radio';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import {MatStepperModule } from '@angular/material/stepper';
 
 
 
@@ -36,7 +37,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatListModule,
     MatTableModule, 
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatStepperModule
   ],
   exports: [
     CommonModule,
@@ -52,7 +54,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatListModule,
     MatTableModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

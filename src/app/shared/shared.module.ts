@@ -4,6 +4,8 @@ import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
 
 import {ExponentialPipe} from './pipes/exponential/exponential.pipe';
+import {CartPipe} from './pipes/cart/cart.pipe';
+
 import {HighlightDirective} from './directives/highlight/highlight.directive';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
@@ -17,6 +19,7 @@ import {MaterialModule} from './../material/material.module';
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
+    CartPipe
   ],
   //exports: para que puedan ser vistos desde otros modulos o componentes
   exports: [
@@ -24,6 +27,7 @@ import {MaterialModule} from './../material/material.module';
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
+    CartPipe
   ],
   imports: [
     CommonModule,
@@ -32,4 +36,5 @@ import {MaterialModule} from './../material/material.module';
     ReactiveFormsModule
   ]
 })
+
 export class SharedModule { }

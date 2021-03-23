@@ -32,8 +32,7 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent
-      }
-      ,
+      },
       {
         path: 'products/edit/:id',
         component: ProductEditComponent

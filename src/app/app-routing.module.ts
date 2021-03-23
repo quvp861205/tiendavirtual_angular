@@ -34,6 +34,12 @@ const routes: Routes = [
         path: 'contact',
         canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+      },      
+      {
+        // ng g c home
+        path: 'order',
+        canActivate: [AdminGuard],
+        loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
       },
       {
         // ng g c home

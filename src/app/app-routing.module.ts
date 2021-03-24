@@ -26,19 +26,17 @@ const routes: Routes = [
       {
         // ng g c home
         path: 'products',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       {
         // ng g c home
         path: 'contact',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },      
       {
         // ng g c home
         path: 'order',
-        canActivate: [AdminGuard],
+        
         loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
       },
       {
@@ -50,7 +48,12 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AdminGuard],
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: '**',

@@ -84,6 +84,7 @@ Creando vistas con Angular schematic: Generar interfaces rapido
 - Ruta para probar: http://localhost:4200/admin/create
 - ng g @angular/material:nav admin/components/nav
 - Resultado: http://localhost:4200/admin
+- Nota. Cada vez que se agregue una libreria a material/material.module.ts hay que correr: npm install --save @angular/material @angular/cdk
 
 Integrar API REST:
 - al app.module.ts agregar la libreria e importar
@@ -100,3 +101,28 @@ Creando un inventario en el administrador: https://material.angular.io/component
 - componente lista: ng g c admin/components/products-list
 - componente dashboard: ng g c admin/components/dashboard
 - componente inventario: ng g c admin/components/table
+
+Instalar Angular Firebase y configurar Firebase Auth:
+- url: https://console.firebase.google.com/u/0/
+- crear cuenta y crear proyecto: platzi-store
+- Desabilitar analitics
+- ir a pestaña de autentificacion: habilitar por correo/contraseña
+- ir a pestaña de storage: crear storage por default
+- ir a configuracion del proyecto: hacer click en el icono </>
+- - sobrenombre de app: platzi-store
+- - activar firebase hosting
+- - dar continuar a todo por default
+- Llaves para la conexion: settings / general / configuracion
+- Instalar firebase para angular: https://github.com/angular/angularfire
+- ng add @angular/fire
+- o bien: npm install firebase @angular/fire --save
+- agregar variable firebase a los archivos de environments con los datos que estan en settings / general / configuracion.
+- Agregar AngularFireModule al app.module.ts
+
+Autentificacion con firebase: https://github.com/angular/angularfire/blob/master/docs/auth/getting-started.md
+- crear servicio de autentificacion: ng g s core/services/auth
+- crear modulo de autentificacion: ng g m auth --routing
+- crear componente login: ng g c auth/components/login/login
+- crear componente registro: ng g c auth/components/register/register
+- rutas: http://localhost:4200/auth/register y http://localhost:4200/auth/login
+ 

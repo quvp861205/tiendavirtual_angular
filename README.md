@@ -126,3 +126,17 @@ Autentificacion con firebase: https://github.com/angular/angularfire/blob/master
 - crear componente registro: ng g c auth/components/register/register
 - rutas: http://localhost:4200/auth/register y http://localhost:4200/auth/login
  
+Desplegar nuestro proyecto en firebase host:
+- instalar: npm install -g firebase-tools
+- loguearse: firebase login
+- configurar: firebase init
+- - Hosting: Configure and deploy firebase hosting sites
+- - Use an existing project
+- - platzi-store-**** (platzi-store)
+- - (public) dist/platzi-store
+- - rewrite all urls: no
+- - File dist/platzi-store/index.html already exists. Overwrite? No
+- Generar compilacion: ng build --prod
+- Desplegar distribuible: firebase deploy
+- Configurar para rutas no encontradas en fire hosting: firebase.json
+- 

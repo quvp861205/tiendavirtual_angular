@@ -1,13 +1,19 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
+import {AngularFireStorage} from '@angular/fire/storage';
+import { observable, Observable } from 'rxjs';
+import {finalize} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+
+
   constructor(
-    private angularFireAuth: AngularFireAuth
+    private angularFireAuth: AngularFireAuth,
+    private angularFireStorage: AngularFireStorage
   ) { }
 
   createUser(email: string, password: string) {
@@ -26,4 +32,6 @@ export class AuthService {
     return this.angularFireAuth.authState;
     
   }
+
+  
 }

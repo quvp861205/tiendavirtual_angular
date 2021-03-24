@@ -3,6 +3,10 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import {ProductsService} from './../../../core/services/products/products.service';
 import {Router} from '@angular/router';
 import {MyValidators} from './../../../utils/validators';
+import { Observable } from 'rxjs/internal/Observable';
+import {AuthService} from './../../../core/services/auth.service';
+import { AngularFireStorage } from '@angular/fire/storage';
+import {finalize} from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-form',
@@ -12,11 +16,13 @@ import {MyValidators} from './../../../utils/validators';
 export class ProductFormComponent {
 
   form: FormGroup;
+  image$!: Observable<any>;
 
   constructor(
     private formBuilder: FormBuilder,
     private productService: ProductsService,
-    private router: Router
+    private router: Router,
+    private angularFireStorage: AngularFireStorage
   ) {
     this.form = this.formBuilder.group({
       id: ['', [Validators.required]],
@@ -39,6 +45,34 @@ export class ProductFormComponent {
     );
   }
 
+  uploadFile(event: Event) {
+    const target = event.target as HTMLInputElement;
+      const file: File = (target.files as FileList)[0];
+      let url: string;
+
+      console.log("file", file);
+
+      const dir = file.name;
+      const fileRef = this.angularFireStorage.ref(dir);
+
+      const task = this.angularFireStorage.upload(dir, file);
+
+    task.snapshotChanges()
+      .pipe(
+        finalize( () => {
+           this.image$ = fileRef.getDownloadURL();
+
+           this.image$.subscribe(url => {
+             
+             this.form.get('image')!.setValue(url);
+             console.log("this.form", this.form.value);
+           });
+           
+          })
+        
+      )
+      .subscribe();
+  }
 
   ngOnInit() {
     

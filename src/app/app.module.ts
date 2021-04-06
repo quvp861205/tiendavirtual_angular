@@ -15,7 +15,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import {AngularFireMessagingModule} from '@angular/fire/messaging';
 import {environment} from './../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import {environment} from './../environments/environment';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AngularFireMessagingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [
 

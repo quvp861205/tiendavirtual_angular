@@ -6,8 +6,10 @@
                 <a mat-button routerLink="/products" routerLinkActive="active">Productos</a>
                 <a mat-button routerLink="/contact" routerLinkActive="active">Contactos</a>
                 <a mat-button routerLink="/ejercicios" routerLinkActive="active">Ejercicios</a>
+                <a mat-button (click)="installByUser()">Install App</a>
                 
             </nav>
+            
             
             <a routerLink="order" mat-raised-button [matBadge]="total$ | async" matBadgeColor="warn"><mat-icon>shopping_cart</mat-icon>Carrito</a>
         </div>       

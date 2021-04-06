@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {CartService} from './../../../core/services/cart.service';
 import {map} from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -22,6 +22,27 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  installEvent!: any;
+
+  @HostListener('window:beforeinstallprompt', ['$event'])
+
+  onBeforeInstallPrompt(event: Event) {
+    console.log("onBeforeInstall", event);
+    event.preventDefault();
+    this.installEvent = event;
+  }
+
+  installByUser() {
+    if (this.installEvent) {
+      this.installEvent.prompt();
+
+      this.installEvent.userChoice()
+      .then( (respuesta: any) => {
+        console.log("installEvent", respuesta);
+      });
+    }
   }
 
 }

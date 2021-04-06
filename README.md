@@ -139,4 +139,10 @@ Desplegar nuestro proyecto en firebase host:
 - Generar compilacion: ng build --prod
 - Desplegar distribuible: firebase deploy
 - Configurar para rutas no encontradas en fire hosting: firebase.json
-- 
+- - "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+- volver a desplegar: firebase deploy

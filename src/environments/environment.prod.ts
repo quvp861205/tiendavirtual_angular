@@ -1,12 +1,12 @@
 export const environment = {
   production: true,
-  url_api: 'http://platzi-store.herokuapp.com',
+  url_api: 'https://platzi-store.herokuapp.com',
   firebase: {
-    apiKey: 'AIzaSyAD_SC1bGEglGETScDsC01Kyban1MEemHI',
-    authDomain: 'platzi-store-56cca.firebaseapp.com',
-    projectId: 'platzi-store-56cca',
-    storageBucket: 'platzi-store-56cca.appspot.com',
-    messagingSenderId: '415222475996',
-    appId: '1:415222475996:web:a15cd74b63ee4b600b9819',
+    apiKey: 'AIzaSyDU8bahRkc15WcS1ixeyw4Nge1ndBR4A34',
+    authDomain: 'angular-pwa-platzi-a1a1c.firebaseapp.com',
+    projectId: 'angular-pwa-platzi-a1a1c',
+    storageBucket: 'angular-pwa-platzi-a1a1c.appspot.com',
+    messagingSenderId: '152947519464',
+    appId: '1:152947519464:web:13c83165ecef69dad7fe5d'
   }
 };
